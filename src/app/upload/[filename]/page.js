@@ -50,7 +50,7 @@ export default function FilePage({ params }) {
 			</div>
 			{awsTranscriptionItems.length > 0 && awsTranscriptionItems.map(item => (
 				<div key={item.start_time}>
-					<span>
+					<span className="text-white/50 mr-2">
 						{item.start_time} - {item.end_time}
 					</span>
 					<span>

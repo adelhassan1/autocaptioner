@@ -2,17 +2,18 @@
 import React, { useRef, useState } from 'react';
 import styles from './styles.module.css'
 import { useRouter } from 'next/navigation';
+import Link from 'next/link'
 
 
 function Header(){
     return (
     <>
     <div className={styles.top}>
-        <a href="#Home" className={styles.logo}>CaptionGenerator</a>
+        <Link href="/" className={styles.logo}>AutoCaptioner</Link>
         <div className={styles.nav_bar}>
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Contact">Contact</a>
+            <Link href="/">Home</Link>
+            <Link href="/upload">upload</Link>
+            <Link href="/login">Login</Link>
         </div>             
     </div>
     </>
