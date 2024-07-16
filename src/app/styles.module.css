@@ -67,6 +67,7 @@
     line-height: 1.5;
 }
 .home_content a {
+    margin: 25px;
     font-size: 15px;
     position: relative;
     display: inline-flex;
@@ -131,7 +132,8 @@
     transform: scale(1.1);
     transition: 0.7s ease;
 }
-.services .content .card .icon {
+.icon span {
+    display: flex;
     font-size: 50px;
     color: #00adf0;
     text-align: center;
@@ -142,6 +144,10 @@
     color: #00adf0;
     margin-top: 10px;
     font-weight: 400;
+}
+.services .content .card .info h2{
+    font-size: 25px;
+    font-weight: 300;
 }
 .services .content .card .info h3 {
     font-size: 20px;
