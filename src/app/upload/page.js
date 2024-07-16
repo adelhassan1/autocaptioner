@@ -8,12 +8,12 @@ import Link from 'next/link'
 function Header(){
     return (
     <>
-    <div className={styles.top}>
+    <div className={styles.head}>
         <Link href="/" className={styles.logo}>AutoCaptioner</Link>
         <div className={styles.nav_bar}>
-            <Link href="/">Home</Link>
-            <Link href="/upload">upload</Link>
-            <Link href="/login">Login</Link>
+            <Link href="/" className={styles.link}>Home</Link>
+            <Link href="/upload" className={styles.link}>upload</Link>
+            <Link href="/login" className={styles.link}>Login</Link>
         </div>             
     </div>
     </>
@@ -21,17 +21,7 @@ function Header(){
 }
 
 
-function Text(){
-    return(
-    <div className={styles.text}>
-        <h1>Generate Caption For Your videos</h1>
-        <h2>Just Upload, we'll do the rest</h2>
-    </div>
-    )
-}
-
-
-function Cards() {
+function MainContent() {
     const fileInputRef = useRef(null);
 
     const HanddleButtonClick = () => {
@@ -68,7 +58,7 @@ function Cards() {
             setIsUploading(false);
         }
     };
-    return (
+    return(
     <>
         {isUploading && (
             <div className="bg-black/90 text-white fixed inset-0 flex items-center">
@@ -78,38 +68,27 @@ function Cards() {
                 </div>
             </div>
         )}
-        <div className={styles.card_container}>
-            {/* <div className={styles.card}>
-                word will be here
-            </div> */}
-            <div className={styles.two}>
-                <button className={styles.btn} onClick={HanddleButtonClick}>Upload File</button>
-                <input
-                    type="file"
-                    ref={fileInputRef}
-                    onChange={handleFileChnage}
-                    style={{ display: 'none' }}
-                />
-            </div>
-            {/* <div className={styles.three}>
-                video will be here
-            </div> */}
+        <section className={styles.home}>
+        <div className={styles.content}>
+        <h1>Generating Caption For Your videos by any Language</h1>
+        <h2>Just Upload, We will do the rest</h2>
+        <button className={styles.botton} onClick={HanddleButtonClick}>Upload File</button>
+        <input
+            type='file'
+            ref={fileInputRef}
+            onChange={handleFileChnage }
+            style={{display: 'none'}}
+            />
         </div>
+        </section>
     </>
     );
 }
-
-
 export default function Home(){
     return(
     <>
-        <header>
-            <Header />
-        </header>
-        <main className={styles.Main}>
-            <Text />
-            </main>
-            <Cards />
+        <Header />
+        <MainContent />
     </>    
     );
 }
