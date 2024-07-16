@@ -4,7 +4,9 @@ import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import styles from './styles.module.css';
 import Link from "next/link";
-
+import { SiAudiomack } from "react-icons/si";
+import { FaClosedCaptioning } from "react-icons/fa6";
+import { FaDownload } from "react-icons/fa";
 function Header() {
     return (
         <header className={styles.head}>
@@ -25,7 +27,7 @@ function HomeContent() {
             <div className={styles.home_content}>
                 <h1>Welcome to AutoCaptioner</h1>
                 <p>The ultimate tool for creating descriptive and engaging captions for your videos with ease!
-                    Whether you're a content creator, marketer, or simply someone who loves sharing videos with friends and family,
+                    Whether you are a content creator, marketer, or simply someone who loves sharing videos with friends and family,
                     our Caption Generator is here to help you add the perfect touch of text to your videos.
                 </p>
                 <a href="/login">Get Started</a>
@@ -41,7 +43,7 @@ function Service() {
             <div className={styles.content}>
                 <div className={styles.card}>
                     <div className={styles.icon}>
-                        <i className='bx bx-text'></i>
+                        <span><SiAudiomack /></span>
                     </div>
                     <div className={styles.info}>
                         <h2>Audio to Text</h2>
@@ -50,7 +52,7 @@ function Service() {
                 </div>
                 <div className={styles.card}>
                     <div className={styles.icon}>
-                        <i className='bx bxs-captions'></i>
+                        <span><FaClosedCaptioning /></span>
                     </div>
                     <div className={styles.info}>
                         <h2>Generate Caption</h2>
@@ -59,7 +61,7 @@ function Service() {
                 </div>
                 <div className={styles.card}>
                     <div className={styles.icon}>
-                        <i className='bx bx-download'></i>
+                        <span><FaDownload /></span>
                     </div>
                     <div className={styles.info}>
                         <h2>Download</h2>
