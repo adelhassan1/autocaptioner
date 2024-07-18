@@ -4,23 +4,23 @@ import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import styles from './styles.module.css';
 import Link from "next/link";
+
 import { SiAudiomack } from "react-icons/si";
 import { FaClosedCaptioning } from "react-icons/fa6";
 import { FaDownload } from "react-icons/fa";
-<<<<<<< HEAD
 import { FaUniversalAccess } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
-=======
->>>>>>> 877edd5c9a44b94962882e5b8bb9f506f5b8457d
+import Head from "next/head";
+
 function Header() {
     return (
         <header className={styles.head}>
             <Link href="/" className={styles.logo}>AutoCaptioner</Link>
             <nav className={styles.nav_bar}>
                 <Link href="/">Home</Link>
-                <a href="#Services">Services</a>
-                <a href="#About">About</a>
+                <Link href="#Services">Services</Link>
+                <Link href="#About">About</Link>
                 <Link href="/upload">Upload</Link>
                 <Link href="/login">Login</Link>
             </nav>
@@ -37,7 +37,7 @@ function HomeContent() {
                     Whether you are a content creator, marketer, or simply someone who loves sharing videos with friends and family,
                     our Caption Generator is here to help you add the perfect touch of text to your videos.
                 </p>
-                <a href="/login">Get Started</a>
+                <Link href="/login">Get Started</Link>
             </div>
         </section>
     );
@@ -137,13 +137,14 @@ function Footer() {
 
 export default function WelcomePage() {
     return (
-        <HelmetProvider>
-            <Helmet>
+        <>
+            <Head>
+                <title>AutoCaptioner</title> 
+            </Head>
                 <link
                     rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-                />
-            </Helmet>
+                /> 
             <Header />
             <main>
                 <HomeContent />
@@ -151,6 +152,6 @@ export default function WelcomePage() {
                 <About />
             </main>
             <Footer />
-        </HelmetProvider>
+        </>
     );
 }

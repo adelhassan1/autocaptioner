@@ -29,7 +29,7 @@ function LoginForm() {
                     <span> <FaLock /> </span>
                     <input type="password" placeholder="Password"></input>
                 </div>
-                {action==="Sign Up"?<div></div>:<div className={styles.forget_password}>Lost password? <span>Click Here</span></div>}
+                {action==="Sign Up"?<div></div>:<button className={styles.forget_password}>Lost password? <span>Click Here</span></button>}
                 
                 <div className={styles.submit_container}>
                     <div className={action==="Login" ? `${styles.submit} && ${styles.gray}` : styles.submit} onClick={() => {setAction("Sign Up")}}>Sign Up</div>

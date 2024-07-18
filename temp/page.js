@@ -25,7 +25,7 @@ function Text(){
     return(
     <div className={styles.text}>
         <h1>Generate Caption For Your videos</h1>
-        <h2>Just Upload, we'll do the rest</h2>
+        <h2>Just Upload, we will do the rest</h2>
     </div>
     )
 }

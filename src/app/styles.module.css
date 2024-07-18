@@ -45,6 +45,7 @@
     color: #fff;
 }
 .home {
+    margin-top: 80px;
     background-color: #081b29;
     display: flex;
     align-items: center;
@@ -128,10 +129,11 @@
     padding: 25px;
     margin: 45px;
     justify-content: space-between;
+    transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
 }
 .services .content .card:hover {
     transform: scale(1.1);
-    transition: 0.7s ease;
+    transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
 }
 .icon span {
     display: flex;
@@ -193,10 +195,11 @@
     padding: 25px;
     margin: 45px;
     justify-content: space-between;
+    transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
 }
 .About .content .card:hover {
     transform: scale(1.1);
-    transition: 0.7s ease;
+    transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
 }
 .About .icon span {
     display: flex;
