@@ -7,9 +7,12 @@ import Link from "next/link";
 import { SiAudiomack } from "react-icons/si";
 import { FaClosedCaptioning } from "react-icons/fa6";
 import { FaDownload } from "react-icons/fa";
+<<<<<<< HEAD
 import { FaUniversalAccess } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
+=======
+>>>>>>> 877edd5c9a44b94962882e5b8bb9f506f5b8457d
 function Header() {
     return (
         <header className={styles.head}>
