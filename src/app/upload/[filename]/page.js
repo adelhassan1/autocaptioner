@@ -33,7 +33,15 @@ export default function FilePage({ params }) {
 				} else if (data?.status === 'COMPLETED') {
 					setIsTranscribing(false);
 					const transcription = data.transcription;
-					setAwsTranscriptionItems(transcription.results.items);
+					transcription.results.items.forEach((item, key) => {
+						if (!item.start_time) {
+							const prev = transcription.results.items[key - 1];
+							prev.alternatives[0].content += item.alternatives[0].content;
+							delete transcription.results.items[key];
+						}
+					});
+					const filteredItems = transcription.results.items.filter(item => item !== undefined);
+					setAwsTranscriptionItems(filteredItems);
 				} else {
 					console.error('Unexpected response format');
 				}

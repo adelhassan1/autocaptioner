@@ -7,6 +7,9 @@ import Link from "next/link";
 import { SiAudiomack } from "react-icons/si";
 import { FaClosedCaptioning } from "react-icons/fa6";
 import { FaDownload } from "react-icons/fa";
+import { FaUniversalAccess } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
 function Header() {
     return (
         <header className={styles.head}>
@@ -14,6 +17,7 @@ function Header() {
             <nav className={styles.nav_bar}>
                 <Link href="/">Home</Link>
                 <a href="#Services">Services</a>
+                <a href="#About">About</a>
                 <Link href="/upload">Upload</Link>
                 <Link href="/login">Login</Link>
             </nav>
@@ -72,7 +76,52 @@ function Service() {
         </section>
     );
 }
-
+function About() {
+    return (
+    <>
+        <section className={styles.About} id="About">
+        <h1>About</h1>
+        <div className={styles.content}>
+                <div className={styles.card}>
+                    <div className={styles.icon}>
+                        <span><FaUniversalAccess  /></span>
+                    </div>
+                    <div className={styles.info}>
+                        <h2>Our Mission</h2>
+                        <h3>Empowering Accessibility</h3>
+                        <p>Our mission is to make video content accessible to everyone, 
+                            regardless of their hearing abilities or language proficiency</p>
+                    </div>
+                </div>
+                <div className={styles.card}>
+                    <div className={styles.icon}>
+                        <span><FaEye /></span>
+                    </div>
+                    <div className={styles.info}>
+                        <h2>Our Vision</h2>
+                        <h3>Shaping the Future of Video Accessibility</h3>
+                        <p>We utilize advanced technologies like React.js for a seamless user experience, 
+                            AWS S3 for secure and scalable video storage, 
+                            and Amazon Transcribe for precise caption generation</p>
+                    </div>
+                </div>
+                <div className={styles.card}>
+                    <div className={styles.icon}>
+                        <span><FaTools /></span>
+                    </div>
+                    <div className={styles.info}>
+                        <h2>Our Technology</h2>
+                        <h3>Innovative Solutions</h3>
+                        <p>We utilize advanced technologies like React.js for a seamless user experience, 
+                            AWS S3 for secure and scalable video storage, 
+                            and Amazon Transcribe for precise caption generation</p>
+                    </div>
+                </div>
+        </div>
+        </section>
+    </>
+    );
+}
 function Footer() {
     return (
         <footer className={styles.foot}>
@@ -96,6 +145,7 @@ export default function WelcomePage() {
             <main>
                 <HomeContent />
                 <Service />
+                <About />
             </main>
             <Footer />
         </HelmetProvider>

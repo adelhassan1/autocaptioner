@@ -17,7 +17,7 @@
     cursor: pointer;
     text-decoration: none;
     transition: .3s;
-    color: #393f44;
+    color: #276a97;
     padding-left: 40px;
 }
 .head .logo:hover {
@@ -32,7 +32,7 @@
     font-weight: 300;
     cursor: pointer;
     text-decoration: none;
-    color: #393f44;
+    color: #276a97;
     justify-content: space-between;
     margin: 50px;
     transition: .3s;
@@ -106,6 +106,7 @@
     height: auto;
     width: auto;
 }
+
 .services h1 {
     font-size: 40px;
     font-weight: 500;
@@ -156,7 +157,7 @@
 .foot {
     background-color: #081b29;
     display: flex;
-    color: #393f44;
+    color: #276a97;
     padding: 7px;
     margin: 20px;
     padding-left: 40px;
@@ -165,4 +166,60 @@
 .foot .text {
     font-size: 20px;
     font-weight: 200;
+}
+.About{
+    height: auto;
+    width: auto;
+    background-color: rgb(50, 54, 53);
+}
+.About h1 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding: 30px;
+    color: #00adf0;
+}
+.About .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.About .content .card {
+    width: 350px;
+    background-color: #ededee;
+    border-radius: 4px;
+    box-shadow: 0 5px 25px rgb(1 1 1/15%);
+    padding: 25px;
+    margin: 45px;
+    justify-content: space-between;
+}
+.About .content .card:hover {
+    transform: scale(1.1);
+    transition: 0.7s ease;
+}
+.About .icon span {
+    display: flex;
+    font-size: 50px;
+    color: #00adf0;
+    text-align: center;
+    justify-content: center;
+}
+.About .content .card .info {
+    text-align: center;
+    color: #00adf0;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.About .content .card .info h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.About .content .card .info h3 {
+    font-size: 15px;
+    font-weight: 400;
+}
+.About .content .card .info p{
+    font-size: 15px;
+    font-weight: 300;
 }
