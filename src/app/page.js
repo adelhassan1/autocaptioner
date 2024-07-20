@@ -139,12 +139,12 @@ export default function WelcomePage() {
     return (
         <>
             <Head>
-                <title>AutoCaptioner</title> 
+                <title>create next app</title> 
             </Head>
-                <link
+                {/* <link
                     rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-                /> 
+                />  */}
             <Header />
             <main>
                 <HomeContent />

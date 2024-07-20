@@ -6,9 +6,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: rgb(80, 79, 77);
     height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    padding-left: 340px;
+    /* display: flex; */
+    /* justify-content: center; */
     align-items: center;
 }
