@@ -11,7 +11,6 @@ import { FaDownload } from "react-icons/fa";
 import { FaUniversalAccess } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
-import Head from "next/head";
 
 function Header() {
     return (
@@ -22,7 +21,7 @@ function Header() {
                 <Link href="#Services">Services</Link>
                 <Link href="#About">About</Link>
                 <Link href="/upload">Upload</Link>
-                <Link href="/login">Login</Link>
+                <Link href="/login" target="_blank">Login</Link>
             </nav>
         </header>
     );
@@ -138,13 +137,6 @@ function Footer() {
 export default function WelcomePage() {
     return (
         <>
-            <Head>
-                <title>create next app</title> 
-            </Head>
-                {/* <link
-                    rel="stylesheet"
-                    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-                />  */}
             <Header />
             <main>
                 <HomeContent />

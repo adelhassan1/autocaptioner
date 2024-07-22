@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import styles from './styles.module.css';
+import styles from './loginStyles.module.css';
 import { FaRegUser } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa6";
 import { FaRegEnvelopeOpen } from "react-icons/fa6";
@@ -11,7 +11,7 @@ function LoginForm() {
     return (
     <>
         <div className={styles.container}>
-            <div className={styles.Header}>
+            <div className={styles.header}>
                 <div className={styles.text}>{action}</div>
                 <div className={styles.underline}></div>
             </div>
@@ -27,7 +27,7 @@ function LoginForm() {
                 </div>
                 <div className={styles.input}>
                     <span> <FaLock /> </span>
-                    <input type="password" placeholder="Password"></input>
+                    <input type="password" placeholder="Password" required=""></input>
                 </div>
                 {action==="Sign Up"?<div></div>:<button className={styles.forget_password}>Lost password? <span>Click Here</span></button>}
                 
