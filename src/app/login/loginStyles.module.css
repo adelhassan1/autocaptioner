@@ -57,6 +57,7 @@
     font-size: 19px;
 }
 .forget_password {
+    display: flex;
     padding-left: 60px;
     padding-right: 0;
     margin-top: 27px;
