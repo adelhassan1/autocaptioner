@@ -18,12 +18,12 @@ async function getTranscriptionFile(filename) {
 	const client = new S3Client({
 		region: 'eu-north-1',
 		credentials: {
-			accessKeyId: "AKIAU6GD22MEIRDJ7OTN",
-			secretAccessKey: "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",
+			accessKeyId: process.env.AWS_ACCESS_KEY,
+			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 		}
 	});
 	const getObjectCommand = new GetObjectCommand({
-		Bucket: "auto-captioner",
+		Bucket: process.env.BUCKET_NAME,
 		Key: transcriptionFile,
 	});
 	let transcriptionFileRespond = null;
@@ -53,18 +53,18 @@ export async function GET(req) {
 	const transcribeClient = new TranscribeClient({
 		region: 'eu-north-1',
 		credentials: {
-			accessKeyId: "AKIAU6GD22MEIRDJ7OTN",
-			secretAccessKey: "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",
+			accessKeyId: process.env.AWS_ACCESS_KEY,
+			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 		}
 	});
 
 	const transcribionCommand = new StartTranscriptionJobCommand({
 		TranscriptionJobName: jobName,
-		OutputBucketName: "auto-captioner",
+		OutputBucketName: process.env.BUCKET_NAME,
 		OutputKey: filename + '.transcribed',
 		IdentifyLanguage: true,
 		Media: {
-			MediaFileUri: 's3://' + "auto-captioner" + '/' + filename,
+			MediaFileUri: 's3://' + process.env.BUCKET_NAME + '/' + filename,
 		}
 	});
 
