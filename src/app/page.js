@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import Header from '@/app/components/header'
+// import Header from '@/app/components/header'
 import styles from './styles.module.css';
 import Link from "next/link";
 
@@ -22,7 +22,6 @@ function Header() {
                 <Link href="#Services">Services</Link>
                 <Link href="#About">About</Link>
                 <Link href="/upload">Upload</Link>
-                <Link href="/login" target="_blank">Login</Link>
             </nav>
         </header>
     );
@@ -37,7 +36,7 @@ function HomeContent() {
                     Whether you are a content creator, marketer, or simply someone who loves sharing videos with friends and family,
                     our Caption Generator is here to help you add the perfect touch of text to your videos.
                 </p>
-                <Link href="/login">Get Started</Link>
+                <Link href="/upload">Get Started</Link>
             </div>
         </section>
     );
@@ -138,9 +137,7 @@ function Footer() {
 export default function WelcomePage() {
     return (
         <>
-            <Head>
                 <title>Auto Captioner</title> 
-            </Head>
                 {/* <link
                     rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"

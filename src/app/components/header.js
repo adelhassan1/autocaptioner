@@ -11,7 +11,6 @@ export default function Header() {
                 <Link href="#Services">Services</Link>
                 <Link href="#About">About</Link>
                 <Link href="/upload">Upload</Link>
-                <Link href="/login">Login</Link>
             </nav>
         </header>
     );
