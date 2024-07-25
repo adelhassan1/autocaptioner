@@ -13,7 +13,6 @@ function Header(){
         <div className={styles.navbar}>
             <Link href="/" className={styles.links}>Home</Link>
             <Link href="/upload" className={styles.links}>upload</Link>
-            <Link href="/login" className={styles.links} target="_blank">Login</Link>
         </div>             
     </div>
     </>
