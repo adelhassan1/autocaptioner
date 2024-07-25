@@ -4,12 +4,15 @@ import styles from './styles.module.css';
 import { FaRegUser } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa6";
 import { FaRegEnvelopeOpen } from "react-icons/fa6";
+import Header from '@/app/components/header'
+
 
 
 function LoginForm() {
     const [action, setAction] = useState('Login');
     return (
     <>
+        <Header />
         <div className={styles.container}>
             <div className={styles.Header}>
                 <div className={styles.text}>{action}</div>
@@ -42,7 +45,7 @@ function LoginForm() {
 } 
 export default function Login() {
     return (
-        <div>
+        <div className="pl-96 pt-24">
             <LoginForm />
         </div>
     );

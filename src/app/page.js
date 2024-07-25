@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import Header from '@/app/components/header'
 import styles from './styles.module.css';
 import Link from "next/link";
 
@@ -13,20 +13,6 @@ import { FaEye } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import Head from "next/head";
 
-function Header() {
-    return (
-        <header className={styles.head}>
-            <Link href="/" className={styles.logo}>AutoCaptioner</Link>
-            <nav className={styles.nav_bar}>
-                <Link href="/">Home</Link>
-                <Link href="#Services">Services</Link>
-                <Link href="#About">About</Link>
-                <Link href="/upload">Upload</Link>
-                <Link href="/login">Login</Link>
-            </nav>
-        </header>
-    );
-}
 
 function HomeContent() {
     return (
@@ -139,7 +125,7 @@ export default function WelcomePage() {
     return (
         <>
             <Head>
-                <title>create next app</title> 
+                <title>Auto Captioner</title> 
             </Head>
                 {/* <link
                     rel="stylesheet"
