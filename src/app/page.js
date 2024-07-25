@@ -11,8 +11,22 @@ import { FaDownload } from "react-icons/fa";
 import { FaUniversalAccess } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
-import Head from "next/head";
 
+
+function Header() {
+    return (
+        <header className={styles.head}>
+            <Link href="/" className={styles.logo}>AutoCaptioner</Link>
+            <nav className={styles.nav_bar}>
+                <Link href="/">Home</Link>
+                <Link href="#Services">Services</Link>
+                <Link href="#About">About</Link>
+                <Link href="/upload">Upload</Link>
+                <Link href="/login" target="_blank">Login</Link>
+            </nav>
+        </header>
+    );
+}
 
 function HomeContent() {
     return (

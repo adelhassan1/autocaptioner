@@ -8,12 +8,12 @@ import Link from 'next/link'
 function Header(){
     return (
     <>
-    <div className={styles.head}>
-        <Link href="/" className={styles.logo}>AutoCaptioner</Link>
-        <div className={styles.nav_bar}>
-            <Link href="/" className={styles.link}>Home</Link>
-            <Link href="/upload" className={styles.link}>upload</Link>
-            <Link href="/login" className={styles.link}>Login</Link>
+    <div className={styles.heading}>
+        <Link href="/" className={styles.log}>AutoCaptioner</Link>
+        <div className={styles.navbar}>
+            <Link href="/" className={styles.links}>Home</Link>
+            <Link href="/upload" className={styles.links}>upload</Link>
+            <Link href="/login" className={styles.links} target="_blank">Login</Link>
         </div>             
     </div>
     </>
@@ -68,8 +68,8 @@ function MainContent() {
                 </div>
             </div>
         )}
-        <section className={styles.home}>
-        <div className={styles.content}>
+        <section className={styles.main}>
+        <div className={styles.contents}>
         <h1>Generating Caption For Your videos by any Language</h1>
         <h2>Just Upload, We will do the rest</h2>
         <button className={styles.botton} onClick={HanddleButtonClick}>Upload File</button>
