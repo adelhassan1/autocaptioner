@@ -10,8 +10,8 @@ export async function POST(req) {
 	const client = new S3Client({
 		region: 'eu-north-1',
 		credentials: {
-			accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+			accessKeyId: "AKIAU6GD22MEIRDJ7OTN",
+			secretAccessKey: "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",
 		}
 	});
 
@@ -20,7 +20,7 @@ export async function POST(req) {
 	const newName = id + '.' + ext;
 
 	const uploadCommand = new PutObjectCommand({
-		Bucket: process.env.BUCKET_NAME,
+		Bucket: "auto-captioner",
 		Body: data,
 		ACL: 'public-read',
 		ContentType: type,
